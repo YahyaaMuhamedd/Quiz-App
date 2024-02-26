@@ -9,7 +9,7 @@ body {
 .quiz-app {
     margin: 20px auto;
     width: 800px;
-    background-color: #f8f8f8;
+    background-color: #e6e5e5;
     padding: 15px;
 }
 
@@ -44,12 +44,12 @@ body {
 }
 
 .quiz-app .answers-area .answer {
-    background-color: #f9f9f9;
+    background-color: #e6e5e5;
     padding: 15px;
 }
 
 .quiz-app .answers-area .answer:not(:last-child) {
-    border-bottom: 1px solid #dfdfdf;
+    border-bottom: 1px solid #0d0b0b;
 }
 
 .quiz-app .answers-area .answer input[type="Radio"]:checked+label {
