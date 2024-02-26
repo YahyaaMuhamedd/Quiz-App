@@ -8,7 +8,7 @@ body {
 
 .quiz-app {
     margin: 20px auto;
-    width: 800px;
+    max-width: 800px;
     background-color: #e6e5e5;
     padding: 15px;
 }
