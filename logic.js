@@ -22,6 +22,15 @@ function GetQuestion() {
 
         if (this.readyState === 4 && this.status === 200) {
             let QuestionObj = JSON.parse(this.responseText);
+            function shuffle(QuestionObj) {
+                for (let i = QuestionObj.length - 1; i > 0; i--) {
+                    let j = Math.floor(Math.random() * (i + 1));
+                    [QuestionObj[i], QuestionObj[j]] = [QuestionObj[j], QuestionObj[i]];
+                }
+                return QuestionObj;
+            }
+            shuffle(QuestionObj);
+            QuestionArea.innerHTML = "";
 
             let counter = QuestionObj.length;
             Counter(counter + 1);
@@ -178,3 +187,20 @@ function countdown(duration, count) {
         }, 1000);
     }
 }
+
+// let myArray = [
+//     { name: 'John', age: 30 },
+//     { name: 'Jane', age: 25 },
+//     { name: 'Doe', age: 35 }
+// ];
+
+// function shuffle(array) {
+//     for (let i = array.length - 1; i > 0; i--) {
+//         let j = Math.floor(Math.random() * (i + 1));
+//         [array[i], array[j]] = [array[j], array[i]];
+//     }
+//     return array;
+// }
+// shuffle(myArray);
+
+// console.log(myArray); // The array is now shuffled
